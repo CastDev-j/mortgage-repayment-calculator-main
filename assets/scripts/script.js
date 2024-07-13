@@ -159,21 +159,6 @@ function printData(amount, term, rate, repayment) {
 }
 
 function changeView() {
-    /*
-        .results-section.finished {
-        height: 455px;
-    }
-
-    .empty-result.finished{
-        opacity: 0;
-    }
-
-    .completed-result.finished{
-        opacity: 0;
-    }
-    
-    */
-
     const resultsSection = document.querySelector('.results-section');
     resultsSection.classList.add('finished');
 
@@ -222,4 +207,17 @@ reset.addEventListener('click', function () {
 document.getElementById('amount').value = '';
 document.getElementById('term').value = '';
 document.getElementById('rate').value = '';
+
+
+const completedResult = document.querySelector('.completed-result');
+completedResult.classList.remove('finished');
+
+const emptyResult = document.querySelector('.empty-result');
+emptyResult.classList.remove('finished');
+
+setTimeout(() => {
+const resultsSection = document.querySelector('.results-section');
+resultsSection.classList.remove('finished');
+
+}, 300);
 });
