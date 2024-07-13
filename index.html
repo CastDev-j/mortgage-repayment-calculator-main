@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./assets/styles/styles.css">
+  <title>Mortgage repayment calculator</title>
+</head>
+
+<body>
+
+  <main>
+
+    <!-- Form section start-->
+    <section class="form-section">
+
+      <!-- Header start -->
+      <header class="calculator-header">
+        <h1 class="header-title">Mortgage Calculator</h1>
+        <div class="clear-button">Clear All</div>
+      </header>
+
+      <!-- Header end -->
+
+      <!-- Form start -->
+
+      <form id="data">
+
+        <div class="input">
+        <label for="amount" class="input-label">
+          Mortgage Amount
+        </label>
+        <div class="input-container">
+          <i class="amount-input-symbol general-symbol">£</i>  
+          <input type="text" placeholder="" id="amount" class="general-input amount-input">
+        </div>
+
+      </div>
+
+        <div class="input">
+          <label for="term" class="input-label">
+            Mortgage Term
+          </label>
+          <div class="input-container">
+            <input type="text" placeholder="" id="term" class="general-input term-input">  
+            <i class="term-input-symbol general-symbol">years</i>  
+          </div>
+          
+        </div>
+
+        <div class="input">
+        <label for="rate" class="input-label">
+          Interest Rate
+        </label>
+        <div class="input-container ">
+          <input type="text" placeholder="" id="rate" class="general-input rate-input">
+          <i class="rate-input-symbol general-symbol">%</i>
+        </div>
+        
+        </div>
+
+        <div class="special-input ">
+        <label for="#" class="input-label">
+          Mortgage Type
+        </label>
+
+        <input type="radio" id="repayment" name="mortgage-type" value="repayment" class="radio-input" checked>
+        <label for="repayment" class="radio-label active"> <div class="ball" ></div> Repayment</label>
+        <input type="radio" id="interest-only" name="mortgage-type" value="interest-only" class="radio-input">
+        <label for="interest-only" class="radio-label"><div class="ball"></div>Interest Only</label>
+        </div>
+
+      </form>
+
+      <button id="collector">
+        <img src="./assets/images/icon-calculator.svg" alt="calculator-img">
+        <span class="button-text">Calculate Repayments</span>
+      </button>
+
+
+      <!-- Form end -->
+    </section>
+
+    <!-- Form section end -->
+
+    <!-- Results start-->
+
+    <section class="results-section">
+      <!-- Empty results start -->
+
+      <article class="empty-result">
+        <img src="./assets/images/illustration-empty.svg" alt="empty-img">
+        <h2 class="results-title">Results shown here</h2>
+        <p class="results-text">
+          Complete the form and click “calculate repayments” to see what
+          your monthly repayments would be.
+        </p>
+      </article>
+
+
+      <!-- Empty results end -->
+
+      <!-- Completed results start -->
+
+      <article class="completed-result">
+        <h2 class="results-title">Your results</h2>
+        <p class="results-text">
+          Your results are shown below based on the information you provided.
+          To adjust the results, edit the form and click “calculate repayments” again.
+        </p>
+
+        <section class="result">
+          <article>
+            <p class="results-text">
+              Your monthly repayments
+            </p>
+
+            <div class="monthly-repayments">
+              £1,797.74
+            </div>
+          </article>
+
+          <article>
+            <p class="results-text">
+              Total you'll repay over the term
+            </p>
+            <div class="final-amount">
+              £647,987.47
+            </div>
+          </article>
+        </section>
+      </article>
+
+      <!-- Completed results end -->
+    </section>
+
+    <!-- Results end -->
+  </main>
+
+  <script src="./assets/scripts/script.js"></script>
+</body>
+
+</html>
